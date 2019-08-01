@@ -11,10 +11,11 @@ struct HomeTasksView : View {
                 Section(header: AddNewToDoTaskHeaderView(toDoStore: self.data)) {
                     ForEach(self.data.toDOData, id: \.self) { todo in
                         TaskRow(todo: todo)
+                        .padding()
                     } .onDelete(perform: removeExistingToDoAction)
                         .onMove(perform: move)
                 }
-            } .navigationBarTitle(Text("Tasks").font(.largeTitle))
+            }.navigationBarTitle(Text("Tasks").font(.largeTitle))
             .listStyle(.grouped)
             .navigationBarItems(trailing: EditButton())
         }

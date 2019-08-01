@@ -1,14 +1,30 @@
-//
-//  ToDo.swift
-//  TodoList SwiftUI
-//
-//  Created by User on 23/07/19.
-//  Copyright © 2019 Heptagon. All rights reserved.
-//
+
+
 
 import SwiftUI
 
 struct ToDo: Codable,Hashable {
     var title: String
-    var due: String
+    var due: Date
 }
+
+//import CoreData
+//import SwiftUI
+//
+//public class ToDo: NSManagedObject {}
+//
+//extension ToDo {
+//    public class func fetchRequest() -> NSFetchRequest<ToDo> {
+//        return NSFetchRequest<ToDo>(entityName: "ToDo")
+//    }
+//
+//    @NSManaged var description: String
+//    @NSManaged var due: Date
+//
+//    static func create(description: String, in context: NSManagedObjectContext) {
+//        let newTodo = ToDo(context: context)
+//        newTodo.description = description
+//        newTodo.due = Date()
+//    }
+//}
+
