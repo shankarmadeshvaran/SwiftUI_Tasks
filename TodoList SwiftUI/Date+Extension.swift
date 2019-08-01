@@ -2,15 +2,31 @@
 import SwiftUI
 
 extension Date {
+    
     func dateComponents() -> DateComponents {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.year, .month, .day], from: self)
         return components
     }
     
-    func compare(currentDate: Date) -> Bool {
-        if self.dateComponents() == currentDate.dateComponents() {
+    func isEqual(currentDate: Date) -> Bool {
+        if self.dateComponents().day == currentDate.dateComponents().day {
             return true
+        } else {
+            return false
+        }
+    }
+    
+    func isPast(today currentDate: Date) -> Bool {
+        if let givenDate = currentDate.dateComponents().day ,
+            self.dateComponents().day != nil {
+            if givenDate > self.dateComponents().day! {
+                return false
+            } else if givenDate < self.dateComponents().day! {
+                return true
+            } else {
+                return false
+            }
         } else {
             return false
         }

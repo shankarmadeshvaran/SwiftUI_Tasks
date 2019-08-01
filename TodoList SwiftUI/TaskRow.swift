@@ -4,7 +4,7 @@ import SwiftUI
 
 struct TaskRow: View {
     let todo: ToDo
-    @State var selectedDate = Date()
+    @State var todayDate: Date
     
     var body: some View {
         VStack(alignment: .trailing, spacing: 10) {
@@ -16,11 +16,11 @@ struct TaskRow: View {
                 .minimumScaleFactor(0.6)
                 .lineLimit(nil)
             
-            Text(todo.due.compare(currentDate: selectedDate) ? "Today" : todo.due.string(format: "dd-MM-yyyy"))
+            Text(todo.due.isEqual(currentDate: todayDate) ? "Today" : todo.due.string(format: "dd-MM-yyyy"))
                 .bold()
-                .foregroundColor(todo.due.compare(currentDate: selectedDate) ? Color.blue : Color.primary)
+                .foregroundColor(todo.due.isEqual(currentDate: todayDate) ? Color.blue : Color.primary)
                 .font(.system(size: 17))
                 .frame(height: 20, alignment: .trailing)
-        } .listRowBackground(todo.due.compare(currentDate: selectedDate) ? Color.green : Color.pink)
+        }
     }
 }

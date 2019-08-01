@@ -3,7 +3,6 @@
 import SwiftUI
 
 struct AddNewToDoTaskHeaderView: View {
-    
     @ObjectBinding var toDoStore: Store
     @State var dueDate = Date()
     
