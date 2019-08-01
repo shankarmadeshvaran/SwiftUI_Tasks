@@ -1,11 +1,10 @@
 
-
 import SwiftUI
 
 struct HomeTasksView : View {
-    @ObjectBinding var data = Store()
+    @ObservedObject var data = ToDoStore()
     @State var selectedTask: ToDo? = nil
-
+    
     @State var showingSheet: Bool = false
     @State var selectedDate = Date()
     
@@ -14,33 +13,45 @@ struct HomeTasksView : View {
             title: Text("Todo Actions"),
             message: nil,
             buttons: [
-                ActionSheet.Button.default(Text("Mark as Complete"), onTrigger: {
-                    self.data.CompleteTask(self.selectedTask)
-                    self.showingSheet.toggle()
-                }), ActionSheet.Button.cancel({
+                CompleteButton,
+                NotifyButton,
+                ActionSheet.Button.cancel({
                     self.showingSheet.toggle()
                 })])
+    }
+    
+    var CompleteButton: ActionSheet.Button {
+        ActionSheet.Button.default(Text("Mark as Complete")) {
+            self.data.CompleteTask(self.selectedTask)
+            self.showingSheet.toggle()
+        }
+    }
+    
+    var NotifyButton: ActionSheet.Button {
+        ActionSheet.Button.default(Text(self.selectedTask?.isNotify == true ? "Enable Notification" : "Disable Notification")) {
+            self.data.toggleNotifySetting(self.selectedTask)
+            self.showingSheet.toggle()
+        }
     }
     
     var body: some View {
         NavigationView {
             List {
                 Section(header: AddNewToDoTaskHeaderView(toDoStore: self.data)) {
-                    ForEach(self.data.toDOData, id: \.self) { todo in
+                    ForEach(self.data.toDOData, id: \.title) { todo in
                         Button(action: {
                             self.selectedTask = todo
                             self.showingSheet = true
                         }) {
                             TaskRow(todo: todo ,todayDate: self.selectedDate)
-                                .padding()
                         }
                         .listRowBackground(todo.due.isEqual(currentDate: self.selectedDate) ? Color.green : todo.due.isPast(today: self.selectedDate) ? Color.yellow : Color.pink)
                     } .onDelete(perform: removeExistingToDoAction)
                         .onMove(perform: move)
                 }
             }.navigationBarTitle(Text("Tasks").font(.largeTitle))
-                .listStyle(.grouped)
                 .navigationBarItems(trailing: EditButton())
+                .edgesIgnoringSafeArea(.bottom)
         }.actionSheet(isPresented: $showingSheet, content: {
             presentSheet
         })

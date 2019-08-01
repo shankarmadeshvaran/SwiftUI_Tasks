@@ -10,8 +10,9 @@
 		CE8E274E22E83FE200A559E2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E274D22E83FE200A559E2 /* Date+Extension.swift */; };
 		CEC442B522E6399F007D0711 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC442B422E6399F007D0711 /* ToDo.swift */; };
 		CEC442B722E639B9007D0711 /* AddNewToDoTaskHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC442B622E639B9007D0711 /* AddNewToDoTaskHeaderView.swift */; };
-		CEC442B922E63A17007D0711 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC442B822E63A17007D0711 /* Store.swift */; };
+		CEC442B922E63A17007D0711 /* ToDoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC442B822E63A17007D0711 /* ToDoStore.swift */; };
 		CEC442BB22E63B33007D0711 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC442BA22E63B33007D0711 /* TaskRow.swift */; };
+		CED1F1ED22EAC2C40072E222 /* Swift.png in Resources */ = {isa = PBXBuildFile; fileRef = CED1F1EC22EAC2C40072E222 /* Swift.png */; };
 		CEFCEB1722DDA5A0003A75A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB1622DDA5A0003A75A5 /* AppDelegate.swift */; };
 		CEFCEB1922DDA5A0003A75A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB1822DDA5A0003A75A5 /* SceneDelegate.swift */; };
 		CEFCEB1B22DDA5A0003A75A5 /* HomeTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCEB1A22DDA5A0003A75A5 /* HomeTasksView.swift */; };
@@ -24,8 +25,9 @@
 		CE8E274D22E83FE200A559E2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		CEC442B422E6399F007D0711 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		CEC442B622E639B9007D0711 /* AddNewToDoTaskHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDoTaskHeaderView.swift; sourceTree = "<group>"; };
-		CEC442B822E63A17007D0711 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		CEC442B822E63A17007D0711 /* ToDoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoStore.swift; sourceTree = "<group>"; };
 		CEC442BA22E63B33007D0711 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		CED1F1EC22EAC2C40072E222 /* Swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift.png; sourceTree = "<group>"; };
 		CEFCEB1322DDA5A0003A75A5 /* TodoList SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TodoList SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFCEB1622DDA5A0003A75A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFCEB1822DDA5A0003A75A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,8 +74,9 @@
 				CEC442BA22E63B33007D0711 /* TaskRow.swift */,
 				CE8E274D22E83FE200A559E2 /* Date+Extension.swift */,
 				CEC442B622E639B9007D0711 /* AddNewToDoTaskHeaderView.swift */,
-				CEC442B822E63A17007D0711 /* Store.swift */,
+				CEC442B822E63A17007D0711 /* ToDoStore.swift */,
 				CEC442B422E6399F007D0711 /* ToDo.swift */,
+				CED1F1EC22EAC2C40072E222 /* Swift.png */,
 				CEFCEB1C22DDA5A2003A75A5 /* Assets.xcassets */,
 				CEFCEB2122DDA5A3003A75A5 /* LaunchScreen.storyboard */,
 				CEFCEB2422DDA5A3003A75A5 /* Info.plist */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEFCEB2322DDA5A3003A75A5 /* LaunchScreen.storyboard in Resources */,
+				CED1F1ED22EAC2C40072E222 /* Swift.png in Resources */,
 				CEFCEB2022DDA5A2003A75A5 /* Preview Assets.xcassets in Resources */,
 				CEFCEB1D22DDA5A2003A75A5 /* Assets.xcassets in Resources */,
 			);
@@ -164,7 +168,7 @@
 				CEFCEB1722DDA5A0003A75A5 /* AppDelegate.swift in Sources */,
 				CEFCEB1922DDA5A0003A75A5 /* SceneDelegate.swift in Sources */,
 				CEFCEB1B22DDA5A0003A75A5 /* HomeTasksView.swift in Sources */,
-				CEC442B922E63A17007D0711 /* Store.swift in Sources */,
+				CEC442B922E63A17007D0711 /* ToDoStore.swift in Sources */,
 				CEC442B722E639B9007D0711 /* AddNewToDoTaskHeaderView.swift in Sources */,
 				CE8E274E22E83FE200A559E2 /* Date+Extension.swift in Sources */,
 				CEC442BB22E63B33007D0711 /* TaskRow.swift in Sources */,

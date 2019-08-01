@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct AddNewToDoTaskHeaderView: View {
-    @ObjectBinding var toDoStore: Store
+    @ObservedObject var toDoStore: ToDoStore
     @State var dueDate = Date()
     
     @State var newToDo: String = ""
@@ -19,26 +19,44 @@ struct AddNewToDoTaskHeaderView: View {
     }
     
     var alert: Alert {
-        Alert(title: Text("Task to do can't be empty"), message: Text("Next Task to Do"), dismissButton: .default(Text("OK")))
+        Alert(title: Text("Please enter the Task name"), message: Text("Next Task to Do"), dismissButton: .default(Text("OK")))
+    }
+    var dateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateStyle = .long
+        return dateFormatter
     }
     
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             TextField("Enter the new task to do",text: $newToDo)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
                 .foregroundColor(.primary)
-                .textFieldStyle(.roundedBorder)
                 .font(.system(size: 20))
-                .lineLimit(nil)
+                .frame(height: 60)
             
-            DatePicker(
-                selection: $dueDate,
-                in: dateClosedRange,
-                displayedComponents: [.hourAndMinute, .date],
-                label: { DateView() }
-            ).datePickerStyle(.default)
-                .foregroundColor(.primary)
-                .font(.system(size: 25))
-            
+            HStack(alignment: .center, spacing: 10) {
+                Text("Due Date")
+                    .foregroundColor(.primary)
+                    .font(.system(size: 21))
+                    .bold()
+                
+                Text("\(dueDate, formatter: dateFormatter)")
+                    .foregroundColor(.secondary)
+                    .font(.system(size: 20))
+                    .bold()
+            }.onTapGesture {
+                self.showDatePicker.toggle()
+            }
+            if self.showDatePicker {
+                DatePicker(
+                    selection: $dueDate,
+                    in: dateClosedRange,
+                    displayedComponents: [.hourAndMinute, .date],
+                    label: {Text("")})
+                    .datePickerStyle(DefaultDatePickerStyle())
+            }
             Button(action: {
                 self.addNewTask(dueDate: self.dueDate)
             }) {
@@ -55,20 +73,11 @@ struct AddNewToDoTaskHeaderView: View {
     
     func addNewTask(dueDate: Date) {
         if !self.newToDo.isEmpty {
-            self.toDoStore.toDOData.append(ToDo(title: self.newToDo, due: dueDate))
+            self.toDoStore.toDOData.append(ToDo(title: self.newToDo, due: dueDate, isNotify: true))
             self.newToDo = ""
         } else {
             self.isShowAlert = true
         }
-    }
-    
-}
-
-struct DateView: View  {
-    var body: some View {
-        Text("Due Date")
-            .foregroundColor(.gray)
-            .font(.system(size: 20))
     }
 }
 
@@ -77,6 +86,7 @@ struct AddNewTaskButtonView: View  {
         Text("Add New Task")
             .bold()
             .foregroundColor(.white)
-            .font(.system(size: 24))
+            .font(.system(size: 22))
     }
 }
+
