@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14886.2" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ToDo" representedClassName=".ToDo" syncable="YES">
+        <attribute name="due" attributeType="Date" defaultDateTimeInterval="586430640" usesScalarValueType="NO"/>
+        <attribute name="isNotify" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="ToDo" positionX="-45" positionY="0" width="128" height="88"/>
+    </elements>
+</model>
