@@ -14,5 +14,8 @@ This app is updated for Xcode 11 beta 5. I'll be updating the code for upcoming 
 ## Issues
 This task app having design issues and I'm still adding features , updating and fixing bugs whenever I came across.
 
+## More Updates
+Follow me on [Twitter](https://twitter.com/Shankar__am) to get the latest update about features, code and more.
+
 
 
