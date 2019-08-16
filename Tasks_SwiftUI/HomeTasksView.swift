@@ -1,10 +1,4 @@
-//
-//  ContentView.swift
-//  Tasks_SwiftUI
-//
-//  Created by User on 02/08/19.
-//  Copyright © 2019 Heptagon. All rights reserved.
-//
+
 
 import SwiftUI
 import CoreData
