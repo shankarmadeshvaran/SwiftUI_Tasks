@@ -68,18 +68,11 @@
 		CE1FB8BE22F4147400ADC538 /* Tasks_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FB8BF22F4147400ADC538 /* AppDelegate.swift */,
-				CE1FB8C122F4147400ADC538 /* SceneDelegate.swift */,
-				CE1FB8C622F4147400ADC538 /* HomeTasksView.swift */,
-				CE1FB8D822F4177F00ADC538 /* TaskRow.swift */,
-				CE1FB8DA22F4197600ADC538 /* Date+Extensions.swift */,
-				CE1FB8DC22F419A400ADC538 /* AddNewToDoTaskHeaderView.swift */,
-				CE2F880D22F9868300F0A4D9 /* Swift.png */,
-				CE1FB8C822F4147900ADC538 /* Assets.xcassets */,
-				CE1FB8CD22F4147900ADC538 /* LaunchScreen.storyboard */,
-				CE1FB8D022F4147900ADC538 /* Info.plist */,
-				CE1FB8C322F4147400ADC538 /* Tasks_SwiftUI.xcdatamodeld */,
-				CE1FB8D622F414F600ADC538 /* ToDo.swift */,
+				CEAF7BCC230CD97600E4828F /* Supporting Files */,
+				CEAF7BCB230CD8F500E4828F /* Model */,
+				CEAF7BC9230CD8BF00E4828F /* View */,
+				CEAF7BCA230CD8D600E4828F /* Resources */,
+				CEAF7BC7230CD87700E4828F /* Extensions */,
 				CE1FB8CA22F4147900ADC538 /* Preview Content */,
 			);
 			path = Tasks_SwiftUI;
@@ -91,6 +84,53 @@
 				CE1FB8CB22F4147900ADC538 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEAF7BC7230CD87700E4828F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE1FB8DA22F4197600ADC538 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEAF7BC9230CD8BF00E4828F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE1FB8C622F4147400ADC538 /* HomeTasksView.swift */,
+				CE1FB8D822F4177F00ADC538 /* TaskRow.swift */,
+				CE1FB8DC22F419A400ADC538 /* AddNewToDoTaskHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEAF7BCA230CD8D600E4828F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F880D22F9868300F0A4D9 /* Swift.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEAF7BCB230CD8F500E4828F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE1FB8C322F4147400ADC538 /* Tasks_SwiftUI.xcdatamodeld */,
+				CE1FB8D622F414F600ADC538 /* ToDo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEAF7BCC230CD97600E4828F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE1FB8BF22F4147400ADC538 /* AppDelegate.swift */,
+				CE1FB8C122F4147400ADC538 /* SceneDelegate.swift */,
+				CE1FB8C822F4147900ADC538 /* Assets.xcassets */,
+				CE1FB8CD22F4147900ADC538 /* LaunchScreen.storyboard */,
+				CE1FB8D022F4147900ADC538 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,7 +352,7 @@
 				DEVELOPMENT_ASSET_PATHS = "Tasks_SwiftUI/Preview\\ Content";
 				DEVELOPMENT_TEAM = UQ634A2945;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Tasks_SwiftUI/Info.plist;
+				INFOPLIST_FILE = "Tasks_SwiftUI/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +372,7 @@
 				DEVELOPMENT_ASSET_PATHS = "Tasks_SwiftUI/Preview\\ Content";
 				DEVELOPMENT_TEAM = UQ634A2945;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Tasks_SwiftUI/Info.plist;
+				INFOPLIST_FILE = "Tasks_SwiftUI/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
