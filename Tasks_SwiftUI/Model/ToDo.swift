@@ -1,6 +1,4 @@
 
-//  ToDo.swift
-
 import SwiftUI
 import Foundation
 import CoreData

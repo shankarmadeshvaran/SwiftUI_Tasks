@@ -4,7 +4,7 @@ import CoreData
 import Combine
 
 struct TaskRow: View {
-    @ObservedObject var todo: ToDo
+    @State var todo: ToDo
     @State var todayDate: Date
     
     var body: some View {

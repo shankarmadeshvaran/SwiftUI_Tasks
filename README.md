@@ -8,8 +8,8 @@
 This project was made for fun to try out Swift UI and see how it interacts with other layers of the application now that we don't have view controllers. We're all still learning. This project is merely my attempt to put something together based on the ideas put accross in WWDC videos and in the documentation.
 
 ## Platforms
-Task app will currently run from iOS 13 beta.
-This app is updated for Xcode 11 beta 5. I'll be updating the code for upcoming betas also.
+Task app will currently run from iOS 13 and its betas.
+This app is updated for Xcode 11 beta 7. I'll be updating the code for upcoming betas also.
 
 ## Issues
 This task app having design issues and I'm still adding features , updating and fixing bugs whenever I came across.

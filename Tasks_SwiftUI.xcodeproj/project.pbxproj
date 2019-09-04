@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE1FB8BC22F4147400ADC538 /* Tasks_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1FB8BC22F4147400ADC538 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1FB8BF22F4147400ADC538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1FB8C122F4147400ADC538 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE1FB8C422F4147400ADC538 /* Tasks_SwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks_SwiftUI.xcdatamodel; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		CE1FB8BD22F4147400ADC538 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FB8BC22F4147400ADC538 /* Tasks_SwiftUI.app */,
+				CE1FB8BC22F4147400ADC538 /* Tasks.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 			);
 			name = Tasks_SwiftUI;
 			productName = Tasks_SwiftUI;
-			productReference = CE1FB8BC22F4147400ADC538 /* Tasks_SwiftUI.app */;
+			productReference = CE1FB8BC22F4147400ADC538 /* Tasks.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -161,7 +161,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = Heptagon;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					CE1FB8BB22F4147400ADC538 = {
 						CreatedOnToolsVersion = 11.0;
@@ -358,9 +358,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.heptagon.Tasks-SwiftUI";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tasks;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -378,9 +378,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.heptagon.Tasks-SwiftUI";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tasks;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
