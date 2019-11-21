@@ -1,5 +1,5 @@
 # SwiftUI_Tasks
- This is a basic app that lets you create a list of todos with specific date and time by user, mark the todos complete and then delete them.It will also send local notification based on the user preference of each tasks.
+Tasks is simple ToDo app developed using SwiftUI and Coredata which having features like Add,Delete,Rearrange and send notification based on data and time provided for each tasks.This is a basic app that lets you create a list of todos with specific date and time by user, mark the todos complete and then delete them.It will also send local notification based on the user preference of each tasks.
 
 <p align="center">
   <img src="https://github.com/shankarmadeshvaran/SwiftUI_Tasks/blob/master/ToDo-tasks.gif" width="30%"/>
