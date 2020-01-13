@@ -8,7 +8,6 @@ import SwiftUI
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
    let notificationCenter = UNUserNotificationCenter.current()
-    @FetchRequest(fetchRequest: ToDo.allToDoFetchRequest()) var toDos: FetchedResults<ToDo>
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -88,23 +87,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
         completionHandler([.alert, .sound])
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-                        
-        // Pass it to the ContentView through the managedObjectContext @Environment variable
-        let homeTasksView = HomeTasksView()
-       
-        homeTasksView.completeTask(task: homeTasksView.returnTodoByDate(dateString: "\(response.notification.request.identifier)"))
-        print("Completed")
-        
-//        if response.notification.request.identifier == "notificationType.due" {
-//            print(response.notification.request.content.title)
-//            print(response.notification.request.content.attachments)
-//            print(response.notification.request.content.body)
-//            print(response.notification.request.content.subtitle)
-//        }
-        completionHandler()
     }
     
     func scheduleNotification(notificationType: ToDo) {
