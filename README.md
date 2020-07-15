@@ -9,13 +9,13 @@ This project was made for fun to try out Swift UI and see how it interacts with 
 
 ## Platforms
 Task app will currently run from iOS 13.
-This app is updated for Xcode 11+. I'll be updating the code for upcoming betas also.
+This app is updated for Xcode 11+. I'll be updating the code for upcoming versions also.
 
 ## Issues
 This task app having design issues and I'm still adding features , updating and fixing bugs whenever I came across.
 
 ## More Updates
-Follow me on [Twitter](https://twitter.com/Shankar__am) to get the latest update about features, code and more. Consider star the repo if you like it. 
+Follow me on [Twitter](https://twitter.com/Shankar__am) and [LinkedIn](https://www.linkedin.com/in/shankar-mathesh/) to get the latest update about features, code and more. Consider star the repo if you like it. 
 
 
 
