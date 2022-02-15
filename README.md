@@ -15,7 +15,7 @@ This app is updated for Xcode 11+. I'll be updating the code for upcoming versio
 This task app having design issues and I'm still adding features , updating and fixing bugs whenever I came across.
 
 ## More Updates
-Follow me on [Twitter](https://twitter.com/Shankar__am) and [LinkedIn](https://www.linkedin.com/in/shankar-mathesh/) to get the latest update about features, code and more. Consider star the repo if you like it. 
+Follow me on [Twitter](https://twitter.com/devinmaking) and [LinkedIn](https://www.linkedin.com/in/shankar-mathesh/) to get the latest update about features, code and more. Consider star the repo if you like it. 
 
 
 
